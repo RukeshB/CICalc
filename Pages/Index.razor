@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@* databinding *@
+@* <input type="text" value="@text" @onchange="e => text = e.Value.ToString()"> *@
+<input @bind="text" @bind:event="oninput">
+<p>@text</p>
+
+@code{
+    string text;
+}
